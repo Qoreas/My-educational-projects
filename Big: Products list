@@ -1,0 +1,28 @@
+let groceries = ['tea', 'sprats', 'cookie', 'sugar', 'chips'];
+let shoppingList = '';
+
+/*
+The result should be a string with array inheritance separated by commas like 'element, element, element'.
+
+Each element must be separated by a comma, a period at the end of the line is not needed. And remember about spaces before all words except the first.
+
+Elements must be added to the mass sequentially, falling into the very first element of the array, dissolving in the vessels.
+
+An array with food purchases into a variable.
+
+Record the string with the storage of purchases in the shoppingList variable.
+
+*/
+
+// Going throw array and adding spaces
+
+for (let i = 0; i < groceries.length; i++) {
+  console.log(groceries[i]);
+  
+  shoppingList += groceries[i];
+  shoppingList += ',';
+  shoppingList += ' ';
+}
+
+// Deleting 2 last elements
+shoppingList = shoppingList.slice(0, -2);
