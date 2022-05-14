@@ -1,0 +1,29 @@
+let price = 500;
+let discountedPrice;
+
+/*
+
+The cost is stored in the price variable.
+
+If the purchase price is between 1000 (inclusive) and 3000 (excluding this value), the discount is 5%.
+
+If the purchase price is from 3000 (inclusive) to 5000 (not including this value), 10% discount.
+
+If the purchase price is from 5000 (inclusive) and above, a 15% discount.
+
+In other cases, there is no discount for buyers.
+
+Calculate the cost including the discount and write the result to a variable
+discountedPrice.
+
+*/
+
+if (price >= 1000 && price < 3000) {
+  discountedPrice = price - (price / 100 * 5);
+} else if (price >= 3000 && price < 5000) {
+  discountedPrice = price - (price / 100 * 10);
+} else if (price >= 5000) {
+  discountedPrice = price - (price / 100 * 15);
+} else {
+  discountedPrice = price;
+}
