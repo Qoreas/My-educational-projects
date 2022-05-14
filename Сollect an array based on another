@@ -1,0 +1,26 @@
+let luggage = ['package', 'ball', 'slippers', 'scratching post', 'box', 'bowl', 'mint'];
+let startIndex = 5;
+let quantity = 2;
+let chosenLuggage = [];
+
+/*
+The original array with luggage is stored in the luggage variable.
+
+The index of the element from which to start adding baggage (including this element) is stored in the startIndex variable.
+
+The number of items to take with you is stored in the quantity variable.
+
+Build a new array based on the original one, adding elements sequentially 
+(from the lowest index to the highest). 
+Select a certain number of elements from the luggage array, starting at the element at index startIndex, and add them to the new array. 
+It must be stored in the chosenLuggage variable.
+*/
+
+
+for (let i = startIndex; i <= luggage.length - 1; i++) {
+  if (chosenLuggage.length === quantity) {
+    break;
+  }
+  console.log(luggage[i]);
+  chosenLuggage.push(luggage[i]);
+}
