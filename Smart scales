@@ -1,0 +1,22 @@
+let weight = 4;
+let recommendation;
+
+/*
+The weight is stored in the weight variable.
+
+Write the recommendation as a string in the recommendation variable.
+
+If the weight is up to 4 kg (not including this value), the recommendation is 'Time for a snack'.
+
+If the weight is from 4 kg inclusive to 5.5 kg inclusive - 'Weight is normal'.
+
+If the weight is more than 5.5 kg - 'Time for training'.
+*/
+
+if (weight < 4) {
+  recommendation = 'Time for a snack';
+} else if (weight >= 4 && weight <= 5.5) {
+  recommendation = 'Weight is normal';
+} else {
+  recommendation = 'Time for training'';
+}
