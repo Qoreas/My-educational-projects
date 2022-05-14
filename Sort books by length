@@ -1,0 +1,21 @@
+let books = ['Ulysses', 'The Jungle Book', 'Radiance', 'Inspector', 'Hamlet', 'Oblomov', 'Thumbelina', 'Shantaram', 'Wii', 'Silmarillion', 'It'];
+let minNumber = 3;
+let maxNumber = 5;
+let filteredBooks = [];
+
+/* 
+The array of books is stored in the books variable.
+
+The minNumber variable is set to the minimum number of letters in a book title (inclusive), and the maxNumber variable is set to the maximum number of letters (inclusive).
+
+The result is written to the filteredBooks variable.
+*/
+
+for (let i = 0; i < books.length; i++) {
+  
+  if (books[i].length >= minNumber && books[i].length <= maxNumber) {
+    filteredBooks.push(books[i]);
+  }
+}
+
+console.log(filteredBooks);
