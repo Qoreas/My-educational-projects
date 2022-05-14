@@ -1,0 +1,28 @@
+let temperature = 18;
+let itsRaining = false;
+
+let minutes;
+
+/* 
+First, if it rains, the walk cannot take place. In this case, the duration of the walk should be 0.
+
+Secondly, if the temperature is too low (below 0°C) or too high (above 35°C), the walk will not take place either.
+
+Thirdly, the ideal temperature for walking is 20°C. In this case, the walk lasts 20 minutes.
+
+In other cases, the duration of the walk decreases by a minute for each degree of deviation from the ideal temperature:
+at 19°C or 21°C, the duration will be 19 minutes, at 18°C or 22°C, 18 minutes, and so on.
+*/
+
+if (!itsRaining && temperature >= 0 && temperature <= 35) {
+  if (temperature == 20) {
+    minutes = 20;
+  } else if (temperature > 20) {
+    minutes = 20 - (temperature - 20)
+  } else {
+    minutes = 20 - (20 - temperature)
+  }
+  
+} else {
+  minutes = 0;
+}
