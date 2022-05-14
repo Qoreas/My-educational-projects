@@ -1,8 +1,8 @@
 // Smoothie composition
 
-let liquids = ['вода', 'молоко', 'сок', 'чай', 'йогурт'];
-let fruits = ['киви', 'банан', 'персик', 'манго', 'груша', 'ананас'];
-let greens = ['мята', 'шпинат', 'руккола', 'петрушка', 'базилик'];
+let liquids = ['water', 'milk', 'juice', 'tea', 'yogurt'];
+let fruits = ['kiwi', 'banana', 'peach', 'mango', 'pear', 'pineapple'];
+let greens = ['mint', 'spinach', 'arugula', 'parsley', 'basil'];
 
 // Customer choose
 
