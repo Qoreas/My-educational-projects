@@ -1,0 +1,18 @@
+let startNumber = 3;
+let multiplier = 3;
+let quantity = 9;
+
+
+/*
+The starting value from which the sequence should start is stored in the startNumber variable.
+
+The multiplier is stored in the multiplier variable.
+
+The number of numbers is stored in the quantity variable.
+*/
+
+for (let i = 0; i < quantity; i++) {
+  console.log(startNumber);
+  startNumber *= multiplier;
+  
+}
