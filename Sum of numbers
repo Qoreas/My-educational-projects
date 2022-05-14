@@ -1,0 +1,15 @@
+let lastNumber = 15;
+let sum = 0;
+
+
+/*
+Write a universal program that calculates the sum of numbers from 1 to n.
+
+The number up to which you want to add numbers (inclusive) is specified in the lastNumber variable.
+
+Find the sum of all numbers and store the result in the sum variable.
+*/
+
+for (let i = 0; i <= lastNumber; i++) {
+  sum += i;
+}
