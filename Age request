@@ -1,0 +1,27 @@
+let age = 5;
+let ageGroup;
+
+/*
+Age-related trauma at a variable age.
+
+Check the age and write the age group as a string to the variable age group.
+
+If the age is limited to one year, then the age group is called 'Kittens'.
+
+If the age from one year (does not include this value) to three years is limited - "Young cats".
+
+If the age is from three years (including this value) to seven (inclusive) - 'Middle-aged cats'.
+
+And if the age is from seven years old (not this value) and more - 'Mail cats'.
+
+*/
+
+if (age <= 1) {
+  ageGroup = 'Kittens';
+} else if (age != 1 && age <= 3) {
+  ageGroup = 'Young cats';
+} else if (age != 3 && age <= 7) {
+  ageGroup = 'Middle-aged cats';
+} else {
+  ageGroup = 'Mail cats';
+}
