@@ -1,0 +1,12 @@
+let number = 123;
+let quantity = 0;
+
+/* 
+Write a program that determines how many digits are in a number.
+
+The number itself is stored in the number variable.
+
+Find the number of digits in this number and store the result in the quantity variable.
+*/
+
+quantity = String(number).length
