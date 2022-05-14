@@ -1,0 +1,21 @@
+let numbers = [2, 4, 7, 4, 7, 2];
+let number = 4;
+
+/*
+The array is stored in the numbers variable.
+
+The element whose last index is to be found is stored in the number variable.
+
+Create a variable lastIndex and store the last index of number in it. If there is no number in the array, the lastIndex variable must be equal to -1.
+*/
+
+let lastIndex = -1;
+
+// Search for element
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] == number) {
+    lastIndex = i;
+  } 
+}
+
+console.log(lastIndex);
