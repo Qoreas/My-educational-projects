@@ -1,0 +1,15 @@
+let number = 15;
+
+/*
+Write a program that finds all divisors of a number except for one and the number itself.
+
+The number whose divisors are to be found is stored in the number variable.
+
+Print the divisors to the console sequentially, one after the other.
+*/
+
+for (let i = 1; i <= number ; i++) {
+  if (number % i === 0 && i != 1 && i != number) {
+    console.log(i)
+  } 
+}
