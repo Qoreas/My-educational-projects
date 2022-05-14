@@ -1,0 +1,15 @@
+let lastNumber = 5;
+let multiplicationResult = 1;
+
+
+/*
+Write a universal program that finds the product of all even numbers from a sequence from 1 to n.
+
+The number up to which the sequence goes (inclusive) is stored in the variable lastNumber
+
+Find the product of all numbers and store the result in the multiplicationResult variable.
+*/
+
+for (let i = 2; i <= lastNumber; i += 2) {
+  multiplicationResult *= i;
+}
