@@ -1,0 +1,37 @@
+let days = 5; // Дней в периоде
+let period = 3; // Как часто я ем протеин (раз в три дня)
+let workDayAmount = 200; // Количество протеина в будние
+let weekendAmount = 100; // Количество протеина в выходные
+
+let total = 0; 
+
+/*
+First, the calculation always starts on Monday. This is the first day.
+
+Secondly, I take protein every third day:
+1 day, Monday - no,
+Day 2, Tuesday - no,
+Day 3, Wednesday - yes,
+Day 4, Thursday - no,
+Day 5, Friday - no,
+Day 6, Saturday - yes,
+Day 7, Sunday - no,
+Day 8, Monday - no,
+Day 9, Tuesday - yes
+and so on.
+
+Fourth, it is known how much protein I eat on weekdays and how much on weekends.
+
+Fourthly, the period starts with an increase in the number, from one to infinity (although I usually do not build plans for more than a month).
+
+The program should return the total amount of protein in the period, the total amount of protein in the variable.
+*/
+
+for (let day = period; day <= days; day += period ) {
+  if (day == 2 * period || day == 7 * period ) {
+    total += weekendAmount;
+  } else {
+    total += workDayAmount;
+  }
+  console.log(total);
+}
