@@ -1,0 +1,60 @@
+// Smoothie composition
+
+let liquids = ['вода', 'молоко', 'сок', 'чай', 'йогурт'];
+let fruits = ['киви', 'банан', 'персик', 'манго', 'груша', 'ананас'];
+let greens = ['мята', 'шпинат', 'руккола', 'петрушка', 'базилик'];
+
+// Customer choose
+
+let chosenLiquid = 1;
+let chosenFruit = 3;
+let chosenGreen = 2;
+
+// Order
+
+let order = '';
+
+/* 
+An array with smoothie base options measures a variable liquid.
+
+The fruit array is in the fruit set.
+
+An array with greens to variable greens.
+
+Dimension visitor selection as numbers in variables selectedLiquid (index of selected smoothie base), selectedFruit (selected fruit), selectedGreen (selected greens).
+
+Note that visitors select electrical appliances from the Electronic Devices menu, where the numbering starts with the use, and not from zero, as in arrays. Learn this when fighting.
+
+Gather ingredients with a visitor order like 'Base -' + smoothie base +', fruit -' + selected fruit +', greens -' + selected greens. Write the result to a variable.
+
+*/
+// Add element to start for choose from 1
+
+liquids.unshift('NaN');
+fruits.unshift('NaN');
+greens.unshift('NaN');
+
+// Select element
+
+for (let i = 1; i < liquids.length; i++) {
+  if (chosenLiquid === i) {
+    chosenLiquid = liquids[i];
+  }
+}
+
+for (let i = 1; i < fruits.length; i++) {
+  if (chosenFruit === i) {
+    chosenFruit = fruits[i];
+  }
+}
+
+for (let i = 1; i < greens.length; i++) {
+  if (chosenGreen === i) {
+    chosenGreen = greens[i];
+  }
+}
+
+// Print order
+
+order = 'Basis — ' + chosenLiquid + ', fruit — ' + chosenFruit + ', green — ' + chosenGreen;
+console.log(order);
