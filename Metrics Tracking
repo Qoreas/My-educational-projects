@@ -1,0 +1,48 @@
+let indicators = ['сила', 'гибкость', 'выносливость', 'скорость', 'ловкость'];
+let levels = [8, 15, 9, 12, 11];
+let trainingTime = 30;
+
+
+/*
+The indicators variable contains an array with my sports characteristics.
+
+The levels array contains the levels of each indicator. Each element of this array corresponds by index to an element of the indicators array.
+
+Depending on the training time, different indicators are pumped. The training time is given in minutes and stored in the trainingTime variable.
+
+If training lasts up to 30 minutes, increase Speed (Скорость) and Agility (Ловкость) by 3.
+
+If training is between 30 minutes (excluding this value) and one hour (including this value), increase flexibility (Гибкость) by 3.
+
+If the workout lasts more than one hour (not including this value), increase strength (Сила) and endurance (Выносливость) by 2.
+*/
+
+
+if (trainingTime <= 30 ) {
+    levels[indicators.indexOf('ловкость')] += 3;
+    levels[indicators.indexOf('скорость')] += 3;
+    
+} else if (trainingTime > 30 && trainingTime <= 60) {
+    levels[indicators.indexOf('гибкость')] += 3;
+    
+} else if (trainingTime > 60) {
+    levels[indicators.indexOf('сила')] += 2;
+    levels[indicators.indexOf('выносливость')] += 2;
+}
+
+/*
+Test data
+
+let indicators = ["ловкость","скорость","гибкость","выносливость","сила"];
+let levels = [3,5,7,8,5];
+let trainingTime = 25;
+
+let indicators = ["гибкость","сила","выносливость","скорость","ловкость"];
+let levels = [5,7,9,12,2];
+let trainingTime = 75;
+
+let indicators = ["выносливость","скорость","ловкость","гибкость","сила"];
+let levels = [7,12,5,15,11];
+let trainingTime = 60;
+
+*/
