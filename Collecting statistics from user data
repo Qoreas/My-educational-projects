@@ -1,0 +1,32 @@
+let usersData = ['Виталий Иванович', 'Иннокентий Петрович', 'Александр Александрович', 'Игорь Олегович', 'Евгений Петрович', 'Игнат Денисович',
+'Сергей Александрович', 'Семён Петрович'];
+let query = 'Александрович';
+let matchingUsers = 0;
+
+/* 
+Write a program that will collect statistics from user data.
+
+The data array is written to the usersData variable.
+
+Find all elements of the array with data that contain a certain string. This search string is written to the query variable.
+
+The number of matching elements (users) that match the criterion, write to the matchingUsers variable.
+*/
+
+for (let i = 0; i < usersData.length; i++) {
+  // if word in index
+  if (usersData[i].indexOf(query) > -1) {
+    matchingUsers++;
+    console.log(usersData[i]);
+  }
+}
+
+/*
+data for check program
+query = 'Петрович';
+usersData = ["Виталий Иванович","Иннокентий Петрович","Александр Александрович","Игорь Олегович",
+"Евгений Петрович","Игнат Денисович","Сергей Александрович","Семён Петрович"];
+
+query = 'Елена';
+usersData = ["Людмила Сергеевна","Мария Петровна","Валерия Брониславовна","Елена Васильевна","Людмила Львовна","Елена Сергеевна","Екатерина Максимовна"];
+*/
