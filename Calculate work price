@@ -1,0 +1,38 @@
+/*
+Meow! Write a program to calculate the cost of a project.
+
+Name the function getPrice. It should have two parameters:
+
+- time (in hours) to be spent on the project;
+- a boolean value that indicates the urgency of the project - true for an urgent order and false for a regular one.
+
+Parameter names can be anything.
+
+For each project there is a fixed rate - 1500 rubles per hour. The calculation of the cost of projects looks like this: time * rate per hour.
+
+There are several nuances. If the project is urgent, then the hours are reduced by half, and the rate per hour is increased by 2.5 times.
+
+And if the project time is more than 150 hours, the rate per hour is reduced by 250 rubles.
+
+Check the urgency first. The function must return the cost of the project.
+
+*/
+
+let getPrice = function (time, isExpress) {
+  let pricePerHour = 1500;
+  let total = 0;
+  
+  if (isExpress) {
+    time = time / 2;
+    pricePerHour *= 2.5;
+  }
+  
+  if (time > 150) {
+    pricePerHour -= 250;
+  }
+  
+  total = time * pricePerHour; 
+  return total;
+};
+
+getPrice(60, true);
