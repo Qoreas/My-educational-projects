@@ -1,0 +1,29 @@
+let calculateSalary = function (dirtyMoney) {
+  // Percent
+  let order = 35;
+  
+  // Post-tax recording
+  let whiteMoney;
+  
+  if (dirtyMoney >= 100000) {
+    order = 45;
+    whiteMoney = Math.round(dirtyMoney - (dirtyMoney / 100 * order));
+    
+  } else {
+    whiteMoney = Math.round(dirtyMoney - (dirtyMoney / 100 * order)); 
+  }
+  return whiteMoney;
+};
+
+calculateSalary(40000);
+
+/* 
+Meow! I need a program that from the "dirty" salary 
+(salary before taxes) will calculate the approximate "clean" salary (which is issued to the paws).
+
+Design the program as a function calculateSalary with one parameter — the value of the dirty salary. 
+The function must return the net salary.
+
+I don’t need much precision, we just assume that 35% of the dirty salary is taxes, 
+and if the dirty salary is greater than or equal to 100 thousand, then taxes are already 45%.
+*/
