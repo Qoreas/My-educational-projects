@@ -1,0 +1,38 @@
+
+/*
+Meow! Write a calculate function that will recognize user input, perform mathematical operations, and return the result.
+
+The function's parameters are firstNumber, secondNumber, and operator.
+
+Parameters firstNumber, secondNumber are operands, operator parameter is an operator.
+
+All values come as strings, including operators. The third parameter contains one of the operators: 
+addition ('+'), subtraction ('-'), multiplication ('*'), division ('/').
+
+Depending on the operator, the program must perform different operations: add the first number to the second, 
+subtract the second from the first, multiply the first by the second, divide the first by the second.
+*/
+
+let calculate = function (firstNumber, secondNumber, operator) {
+  let result;
+  firstNumber = Number(firstNumber);
+  secondNumber = Number(secondNumber);
+  
+  if (operator === '+') {
+    result = firstNumber + secondNumber;
+  }
+  
+  if (operator === '-') {
+    result = firstNumber - secondNumber;
+  }
+  
+  if (operator === '*') {
+    result = firstNumber * secondNumber;
+  }
+  
+  if (operator === '/') {
+    result = firstNumber / secondNumber;
+  }
+  
+  return result;
+};
