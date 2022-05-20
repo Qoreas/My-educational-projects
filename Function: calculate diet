@@ -1,0 +1,26 @@
+
+
+/*
+Meow! Write a program that will analyze my daily diet.
+
+Make the program look like a getDiet function. It should take two parameters: 
+an array with the calorie content of dishes and a daily calorie limit. Parameter names can be anything.
+
+The program should return the number of dishes from the array that I can eat and not exceed the allowed calories.
+The dishes will be eaten in order, starting with the first element in the array.
+*/
+
+let getDiet = function (calories, caloriesLimit) {
+  let total = 0;
+  for (let i = 0; i < calories.length; i++) {
+    total += calories[i];
+    if (total > caloriesLimit) {
+      return i;
+    }
+  }
+};
+
+
+let array = [10, 20, 30, 40, 50, 60, 70];
+
+getDiet(array, 50);
