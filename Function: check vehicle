@@ -1,0 +1,20 @@
+/*
+Meow! Write a program to determine the type of transport in a bicycle parking lot.
+
+Make the decision in the form of a checkVehicle function with two parameters: the number of wheels of the vehicle and the weight of this vehicle. Parameter names can be anything.
+
+If there are two wheels and the weight of the vehicle is less than 100 kg, it is a bicycle. The function should return the string 'Parking allowed'.
+
+Otherwise, the function should return the string 'You don't belong here! Meow!'.
+*/
+
+let checkVehicle = function (wheels, weight) {
+  let result;
+  if (wheels === 2 && weight < 100) {
+    result = 'Parking allowed';
+  } else {
+    result = 'You don't belong here! Meow!';
+  }
+  
+  return result;
+};
