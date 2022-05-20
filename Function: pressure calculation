@@ -1,0 +1,14 @@
+/*
+Meow! Write a function calculatePressure that will calculate the pressure at depth and return this value from the function.
+
+The calculation formula is: pressure = liquid density * free fall acceleration * depth.
+
+calculatePressure must have two parameters: fluid density and depth. Parameter names can be anything.
+
+Free fall acceleration is not required. In the formula, you can use the average fixed value - 9.8.
+*/
+
+let calculatePressure = function (density, depth) {
+  let pressure = Math.round(density * 9.8 * depth);
+  return pressure;
+};
