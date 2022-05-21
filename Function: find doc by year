@@ -1,0 +1,25 @@
+/*
+Meow! Write a program getDocumentsNumbers that will return the number of documents for a given year.
+
+The function should have two parameters: an array with the names of the documents and the year for which the documents should be found.
+Parameter names can be anything. The dates in the array are written as strings.
+
+The function should return the number of documents whose title contains the required year.
+
+If there are no such documents in the array, the function should return 0.
+*/
+
+let getDocumentsNumbers = function (docName, searchYear) {
+  let count = 0;
+  for (let i = 0; i < docName.length; i++) {
+    let index = docName[i]; 
+    let year = index.indexOf(searchYear, 4);
+    if (year > -1) {
+      count++;
+    }
+  }
+  return count;
+};
+
+let doc = ["20122011","03032012","20122012","09072011"];
+getDocumentsNumbers(doc, 2012);
