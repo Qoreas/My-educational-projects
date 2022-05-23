@@ -12,7 +12,8 @@ let getYears = function (start, end, numberSum) {
   // go through numbers
   for (let i = start; i <= end; i++) {
     let index = String(i);
-    if (Number(index[0]) + Number(index[1]) + Number(index[2]) + Number(index[3]) === numberSum) {
+    let numbers = Number(index[0]) + Number(index[1]) + Number(index[2]) + Number(index[3]);
+    if (numbers === numberSum) {
       correctYear.push(i);
     }
   }
