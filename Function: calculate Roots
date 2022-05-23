@@ -1,0 +1,37 @@
+/*
+Meow! Write a function calculateRoots that will calculate the roots through the discriminant.
+
+The discriminant formula looks like this: b * b - 4 * a * c. The function must take three parameters as input: a, b, c.
+These are the coefficients from the discriminant formula.
+
+If the resulting number is less than 0, the function should return the string 'No Roots'.
+
+If the result is 0, the root of the equation is one. The function should return the string 'Root equals ' + found root.
+The root formula in this case is: -b / (2 * a).
+
+But if the discriminant is greater than 0, there are two roots. We'll have to count each and add the result to the string.
+Formula for the first root: (-b + √D) / (2 * a). Formula for the second root: (-b - √D) / (2 * a). The function must return the string 'The first root is ' + the first root + ', the second root is ' + the second root.
+*/
+
+let calculateRoots = function (a, b, c) {
+  let result;
+  let D = b * b - 4 * a * c;
+  
+  if (D < 0) {
+    return 'No roots';
+  } 
+  
+  if (D === 0) {
+    result = 'Root is  ' + (-b / (2 * a));
+  }
+  
+  if (D > 0) {
+    let firstNum = (-b + Math.sqrt(D)) / (2 * a);
+    let secondNum = (-b - Math.sqrt(D)) / (2 * a);
+    result = 'First root is ' + firstNum + ', second root is ' + secondNum;
+  }
+  
+  return result;
+};
+
+calculateRoots(30, 5, 1);
