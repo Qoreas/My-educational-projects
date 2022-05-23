@@ -1,0 +1,23 @@
+/*
+Meow! Write a getYears program that will return an array of eligible dates for the Olympics.
+
+The function must take three parameters as input. The first parameter is the year from which you want to start counting (inclusive).
+The second is the year in which this countdown must end (inclusive). The third is a number that represents the sum of the digits in the year number.
+
+The years in the array must be numbers and must be in ascending order, from smallest to largest.
+*/
+
+let getYears = function (start, end, numberSum) {
+  let correctYear = [];
+  // go through numbers
+  for (let i = start; i <= end; i++) {
+    let index = String(i);
+    if (Number(index[0]) + Number(index[1]) + Number(index[2]) + Number(index[3]) === numberSum) {
+      correctYear.push(i);
+    }
+  }
+  return correctYear;
+};
+
+
+getYears(2009, 2015, 8);
