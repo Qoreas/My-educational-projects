@@ -1,0 +1,54 @@
+/*
+Meow! I need a program that will calculate the usefulness and performance of players based on their statistics. 
+Write the code as a getStatistics function with one parameter - an array of players.
+
+Each player in this array is described by an object with three fields: name (name property), goals scored (goals property), and assisted passes (passes property).
+
+The function should return the same array, in which two more fields are added for each player:
+Keksu® utility coefficient (coefficient property) and efficiency (percent property).
+
+The utility factor is calculated as follows: we multiply the player's goals by 2 (because I believe that goals are the most important) and 
+add to this value all the assists of the player.
+
+We consider the performance (the percentage of goals scored by a football player from the result of the whole team) as follows: 
+we find the sum of the goals of all players and find out how many percent of this number each football player scored. Round the value with Math.round.
+*/
+
+let getStatistics = function (players) {
+  let totalGoals = 0;
+  
+  // calculate coifficient and total goals
+  for (let i = 0; i < players.length; i++) {
+    let currentPlayer = players[i];
+    currentPlayer.coefficient = currentPlayer.goals * 2 + currentPlayer.passes;
+    totalGoals += currentPlayer.goals;  
+  }
+  
+  //check value
+  console.log(totalGoals);
+  
+  // calculate goals percent each player
+  for (let j = 0; j < players.length; j++) {
+    let currentPlayer = players[j];
+    let result = (currentPlayer.goals * 100) / totalGoals;
+    currentPlayer.percent = Math.round(result);
+  }
+  
+  return players;
+};
+
+let array = [{"name":"Васька","goals":5,"passes":5},{"name":"Байт","goals":12,"passes":2},{"name":"Снежок","goals":2,"passes":7}];
+getStatistics(array)
+
+/*
+Values to check
+
+[{"name":"Васька","goals":3,"passes":2},{"name":"Байт","goals":10,"passes":1},{"name":"Снежок","goals":2,"passes":14}]
+WILL BE
+[{"name":"Васька","goals":5,"passes":5,"coefficient":15,"percent":26},{"name":"Байт","goals":12,"passes":2,"coefficient":26,"percent":63},{"name":"Снежок","goals":2,"passes":7,"coefficient":11,"percent":11}]
+
+
+[{"name":"Васька","goals":3,"passes":7},{"name":"Байт","goals":5,"passes":2},{"name":"Снежок","goals":15,"passes":2}]
+WILL BE
+[{"name":"Васька","goals":3,"passes":2,"coefficient":8,"percent":20},{"name":"Байт","goals":10,"passes":1,"coefficient":21,"percent":67},{"name":"Снежок","goals":2,"passes":14,"coefficient":18,"percent":13}]
+*/
