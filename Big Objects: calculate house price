@@ -1,0 +1,36 @@
+/*
+Meow! Add the configurator for me. I built a house object and set several properties: 
+rooms (number of rooms), floors (floors), material (material for walls), factor (average area of each room).
+
+I also started a materialPrice map, which shows the cost of each possible material for construction.
+
+Add two methods to the object: calculateSquare, which will return the area of the house, and calculatePrice, which will return the construction cost.
+
+Consider the area as follows: multiply the number of rooms by the coefficient and the number of floors in the house.
+
+The price of construction is the product of the area and the cost of the material of the house.
+*/
+
+let materialPrice = {
+  'wood': 1000,
+  'stone': 1500,
+  'brick': 2000
+};
+
+let house = {
+  rooms: 10,
+  floors: 5,
+  material: 'wood',
+  coefficient: 10.5,
+  
+  calculateSquare: function () {
+    return this.rooms * this.floors * this.coefficient;
+  },
+  
+  calculatePrice: function () {
+    return this.calculateSquare() * materialPrice[this.material];
+  },
+  
+};
+
+console.log(house.calculatePrice());
